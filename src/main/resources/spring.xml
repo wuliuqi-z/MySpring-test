@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--这个配置文件也是使用mySpring框架的开发人员使用的-->
+<beans>
+    <bean id="user" class="com.powernode.myspring.bean.User">
+        <property name="name" value="张三"></property>
+        <property name="age" value="30"></property>
+    </bean>
+    <bean id="userDao" class="com.powernode.myspring.bean.UserDao"></bean>
+    <bean id="userService" class="com.powernode.myspring.bean.UserService">
+        <property name="userDao" ref="userDao"></property>
+    </bean>
+</beans>
